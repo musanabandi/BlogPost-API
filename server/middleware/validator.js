@@ -45,7 +45,7 @@ class validator {
         check("lastName", "LastName must be Invalid").isAlpha(),
         check("password", "Password must be Strong").isStrongPassword(),
         check("gender", "gender should be male or female").isIn(["male", "female"]),
-        check("role", "role must be user or admin").isIn(["user", "admin"])];
+        check("jobRole", "JobRole must be user or admin").isIn(["user", "admin","developer"])];
     }
 
     static newSignInRules() {

@@ -50,9 +50,11 @@ class UserController {
             email,
             gender,
             password,
-            role,
+            confirmPassword,
+            jobRole,
             department,
-            address
+            address,
+            country
 
         } = req.body;
 
@@ -117,7 +119,7 @@ class UserController {
             const token = generateAuthToken({
                 id: data.id,
                 email: data.email,
-                role: data.role,
+                jobRole: data.jobRole,
                 passwordChangedTime: data.passwordChangedTime
             });
 

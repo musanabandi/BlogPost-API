@@ -11,18 +11,26 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "password is required"]
     },
+
+confirmPassword: {
+    type: String,
+    required: [true, "Confirm Password is required"]
+},
+
     gender: {
         type: String,
         enum: ["male", "female"]
     },
-    role: {
+    jobRole: {
         type: String,
         enum: ["user", "admin"],
-        required:[true, "role is required"],
+        required:[true, "jobRole is required"],
         default:"user"
     },
-    address: {type:String,
+    address:"String",
+    country: {type:String,
     default:"Rwanda"},
+
     departement: String,
 
     passwordChangedTime:{
